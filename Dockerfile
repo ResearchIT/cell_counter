@@ -7,7 +7,7 @@ RUN apt-get update && apt-get install -y build-essential git
 
 RUN git clone https://github.com/ResearchIT/cell_counter.git .
 
-RUN apt-get install -y < packages.txt
+RUN apt-get install -y $(cat packages.txt)
 
 RUN pip3 install -r requirements.txt
 
